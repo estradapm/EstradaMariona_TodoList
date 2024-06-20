@@ -11,18 +11,26 @@ const TodoList = () => {
         }
     };
 
+    const removeTask = (index) => {
+        setTasks(tasks.filter((_, i) => i !== index));
+    };
+
     return (
-        <div>
+        <div className="container">
             <h1>TO DO LIST</h1>
             <input
                 type="text"
                 value={inputValue}
                 onChange={(e) => setInputValue(e.target.value)}
                 onKeyPress={addTask}
+                placeholder='What needs to be done?'
             />
-            <ul>
+            <ul className = "taskList">
                 {tasks.map((task, index) => (
-                    <li key={index}>{task}</li>
+                    <li key={index}>
+                        {task}
+                        <button onClick={() => removeTask(index)}>x</button>
+                    </li>
                 ))}
             </ul>
         </div>

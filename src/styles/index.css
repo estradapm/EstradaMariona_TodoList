@@ -1,12 +1,13 @@
 body {
     font-family: Arial, sans-serif;
-    background-color: #f4f4f9;
+    background-color: #ffdb93;
     margin: 0;
     padding: 0;
     display: flex;
     justify-content: center;
-    align-items: center;
+    align-items: flex-sart;
     height: 100vh;
+    margin-top: 90px;
 }
 
 .container {
@@ -14,16 +15,17 @@ body {
     padding: 20px;
     border-radius: 8px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    width: 300px;
+    width: 600px;
 }
 
 h1 {
     text-align: center;
     color: #333;
+    font-size: 3rem;
 }
 
 input[type="text"] {
-    width: calc(100% - 20px);
+    width: 560px;
     padding: 10px;
     margin-bottom: 10px;
     border: 1px solid #ccc;
@@ -36,9 +38,37 @@ ul {
 }
 
 li {
-    background-color: #f9f9f9;
+    background-color: #dcd7d7;
     margin: 5px 0;
     padding: 10px;
-    border: 1px solid #ddd;
+    border: 1px solid #757171;
     border-radius: 4px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: relative;
+}
+
+li span {
+    flex-grow: 1;
+}
+
+button {
+    background: none;
+    border: none;
+    color: red;
+    padding: 5px 10px;
+    cursor: pointer;
+    border-radius: 5px;
+    display: none;
+    position: absolute;
+    right: 10px;
+}
+
+li:hover button {
+    display: block;
+}
+
+button:hover {
+    background-color: #ffcccc;
 }
