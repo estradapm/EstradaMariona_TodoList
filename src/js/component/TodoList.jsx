@@ -33,6 +33,7 @@ const TodoList = () => {
                     </li>
                 ))}
             </ul>
+            {tasks.length ? "" : <span id="warning"> Add a new task</span>}
         </div>
     );
 }
